@@ -1,5 +1,9 @@
-import {GET_CONTACTS,DELETE_CONTACT, ADD_CONTACT,GET_CONTACT,UPDATE_CONTACT} from '../actions/types'
-
+import {
+    GET_CONTACTS,
+    DELETE_CONTACT, 
+    ADD_CONTACT,
+    GET_CONTACT,
+    UPDATE_CONTACT} from '../actions/types'
 
 const initialState ={
     contacts:[],// this is array of all contact
