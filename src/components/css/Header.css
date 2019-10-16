@@ -1,0 +1,34 @@
+
+.col1{
+    display: flex
+}
+.col2{
+    display: flex
+}
+.HeaderItem{
+    width: 100%;
+    height: 40px;
+    margin-top: 0%
+}
+.phoneIcon{
+    background:black;
+    color:white;
+    transform: rotate(90deg);
+    font-size:40px;
+    border-radius:50%;    
+}
+.icon {
+    font-size: 30px
+}
+.parMB{
+    margin-top: 0.5rem;
+    color: black;  
+}
+.points{
+    color: yellow;
+    font-size: 25px;
+    margin-top: 0rem
+}
+.addnewcontact{
+    margin-top: 1rem
+}

@@ -1,0 +1,36 @@
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 2rem
+}
+
+.btn{
+    background: green;
+    color: aliceblue
+}
+.Names{
+    margin-top:0rem;
+    margin-left:3rem;
+    width: 400px;
+}
+.arrow{
+    margin-top: 1rem;
+    font-size: 30px;
+    color: grey;
+}
+.camera{
+    font-size:3rem;
+    margin: 5.7rem;
+    color: aliceblue
+}
+.inputImage{
+    display: flex;
+}
+.cameraImage{
+    background:rgb(94, 84, 84);
+    width: 240px;
+}
+.phoneNumber{
+    margin-top:4rem;
+}
