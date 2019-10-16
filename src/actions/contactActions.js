@@ -22,7 +22,7 @@ export const getContact=(id)=> async dispatch=>{
             type:GET_CONTACT,
             payload:res.data
         })
-}
+       }
 /// action delete
 export const DeleteContact= (id) => async dispatch=> {
     try{
@@ -36,9 +36,8 @@ export const DeleteContact= (id) => async dispatch=> {
             type:DELETE_CONTACT,
             payload:id
             });
-    }
-   
- }
+         }
+        }
  /// action add newcontact
 export const addContact=(contact)=> async dispatch=>{
     const res= await Axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts/',contact)
@@ -46,7 +45,7 @@ export const addContact=(contact)=> async dispatch=>{
         type:ADD_CONTACT,
         payload:res.data
     })
-}
+    }
 /// action updatecontact
 export const updateContact=(contact)=> async dispatch=>{
     const res= await Axios.put(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${contact.id}`,contact)

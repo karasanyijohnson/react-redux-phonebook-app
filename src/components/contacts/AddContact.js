@@ -11,10 +11,8 @@ class AddContact extends Component {
     phone_number: '',
   };
 
-  handleSubmit = (e) => {
-
+handleSubmit = (e) => {
     const {firstName, surName, phone_number} = this.state;
-
     const newContact = {
       name: firstName + ' ' + surName,
       phone_number: phone_number
@@ -83,4 +81,5 @@ class AddContact extends Component {
     );
   }
 }
+
 export default connect(null,{addContact})(AddContact);
