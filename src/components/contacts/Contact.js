@@ -25,9 +25,9 @@ this.props.DeleteContact(id);
         <i className="fas fa-times" onClick={this.onDeleteClick.bind(this, id)}/>
         </div>
         </div>
-    );
-  }
-}
+     );
+   }
+ }
 
 Contact.propTypes = {
   contact: PropTypes.object.isRequired,
