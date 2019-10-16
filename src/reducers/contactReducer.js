@@ -29,7 +29,7 @@ export default (state=initialState,action) =>{
             contact.id!==action.payload
             )
         }
-     case ADD_CONTACT:
+    case ADD_CONTACT:
          return {
              ...state,
              contacts:[action.payload,...state.contacts]

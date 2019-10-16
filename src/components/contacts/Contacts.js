@@ -25,7 +25,7 @@ class Contacts extends React.Component {
         {contacts.map(contact =>(
          <Contact key={contact.id} contact={contact} />
         ))}<br/>
-         <Link to="/contact/add" >
+        <Link to="/contact/add" >
         <button>
         <i className="fas fa-plus" /> Add Contact
         </button>

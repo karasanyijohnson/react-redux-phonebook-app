@@ -13,7 +13,7 @@ export const getContacts=()=> async dispatch=>{
             type:GET_CONTACTS,
             payload:res.data
         })
-}
+       }
 
 ///FETCH A SINGLE CONTACT IN UPDATE FORM
 export const getContact=(id)=> async dispatch=>{
@@ -38,6 +38,7 @@ export const DeleteContact= (id) => async dispatch=> {
             });
          }
         }
+        
  /// action add newcontact
 export const addContact=(contact)=> async dispatch=>{
     const res= await Axios.post('https://code-catalist-phone-book-rails.herokuapp.com/contacts/',contact)
