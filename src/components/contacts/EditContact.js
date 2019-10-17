@@ -6,19 +6,29 @@ import {getContact ,updateContact} from '../../actions/contactActions'
 
 class EditContact extends React.Component {
   state = {
-    name: '',
     phone_number: '',
     firstName:'',
     surName:'',
   };
 // this will return the input edit form
 UNSAFE_componentWillReceiveProps(nextProps,nextState){
-  const nameArray = this.state.name.split(" ");
-  console.log(nameArray[0]);
+  // const nameArray = this.state.name.split(" ");
+  // console.log(this.state.name);
+  // console.log(nameArray[0]);
+
   const {name,phone_number}= nextProps.contact;
-  this.setState({
-    name,
-    phone_number})
+  this.setState({name, phone_number})
+    const nameArray = name.split(" ");
+    if(nameArray.length > 2){
+      this.setState({firstName: nameArray[0]})
+      this.setState({surName: nameArray[1, nameArray.length]})
+    }else{
+      this.setState({firstName: nameArray[0]})
+      this.setState({surName: nameArray[1]})
+    }
+    console.log(this.state.firstName)
+    console.log(this.state.surName)
+
 }
 componentDidMount(){
   const {id}= this.props.match.params;
@@ -27,7 +37,9 @@ componentDidMount(){
 handleSubmit = (e) => {
     e.preventDefault();
 
-const { name, phone_number } = this.state;
+const fullName = this.state.firstName + " " + this.state.surName
+const name = fullName;
+const phone_number = this.state.phone_number;
 const { id } = this.props.match.params; // to match the exact id to be updated
 const updContact = {
   id,
@@ -61,18 +73,18 @@ this.props.updateContact(updContact);
        <i className="fas fa-camera camera"></i>
        </div>
        <div className="Names">
-       <label htmlFor="task" className="firstName">Name</label><br/><br/>
+       <label htmlFor="firstName" className="firstName">Name</label><br/><br/>
        <input 
        type="text" 
-       name="name" 
-       value={name} 
+       name="firstName" 
+       value={this.state.firstName} 
        onChange={this.handleChange}
        /><br/><br/>
-      <label htmlFor="surname" className="lastName">Surname</label><br/><br/>
+      <label htmlFor="surName" className="lastName">Surname</label><br/><br/>
       <input 
       type="text" 
-      name="Surname"
-      value={name} 
+      name="surName"
+      value={this.state.surName} 
       onChange={this.handleChange}/>
       </div>
       </div>
