@@ -5,7 +5,7 @@ import {
     GET_CONTACT,
     UPDATE_CONTACT} from '../actions/types'
 
-const initialState ={
+const initialState = {
     contacts:[],// this is array of all contact
     contact:{} // this represents a current contact which is viewed
 };

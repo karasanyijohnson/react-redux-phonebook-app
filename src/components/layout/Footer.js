@@ -5,7 +5,7 @@ import '../css/Footer.css'
 class Footer extends React.Component{
     render(){
         return(
-            <div className="card-footer ">
+            <div className="card-body footer ">
             <p>@All right Reserved</p>
             </div>    
            )

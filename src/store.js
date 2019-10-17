@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose} from 'redux'; // cpmpose allows us to do more than one thing
+import { createStore, applyMiddleware, compose} from 'redux'; // compose allows us to do more than one thing
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 

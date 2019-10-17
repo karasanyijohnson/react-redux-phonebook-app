@@ -4,7 +4,7 @@ import '../css/Header.css'
 class Header extends React.Component{
     render(){
         return(
-                <div className="card-header">
+                <div className="card-body header">
                 <div className="row">
                 <div className="col col1">
                 <div className="phone">

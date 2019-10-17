@@ -1,4 +1,7 @@
-
+.header{
+    background: whitesmoke;
+    height: 70px;
+}
 .col1{
     display: flex
 }
