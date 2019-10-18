@@ -21,7 +21,7 @@ UNSAFE_componentWillReceiveProps(nextProps,nextState){
     const nameArray = name.split(" ");
     if(nameArray.length > 2){
       this.setState({firstName: nameArray[0]})
-      this.setState({surName: nameArray[1, nameArray.length]})
+      this.setState({surName: nameArray(1, nameArray.length)})
     }else{
       this.setState({firstName: nameArray[0]})
       this.setState({surName: nameArray[1]})
@@ -60,7 +60,7 @@ this.props.updateContact(updContact);
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name,phone_number} = this.state;
+    const { surName,firstName,phone_number} = this.state;
 
     return (
       <div className="container">
@@ -77,14 +77,14 @@ this.props.updateContact(updContact);
        <input 
        type="text" 
        name="firstName" 
-       value={this.state.firstName} 
+       value={firstName} 
        onChange={this.handleChange}
        /><br/><br/>
       <label htmlFor="surName" className="lastName">Surname</label><br/><br/>
       <input 
       type="text" 
       name="surName"
-      value={this.state.surName} 
+      value={surName} 
       onChange={this.handleChange}/>
       </div>
       </div>

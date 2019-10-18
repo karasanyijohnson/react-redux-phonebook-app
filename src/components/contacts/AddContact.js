@@ -49,14 +49,14 @@ handleSubmit = (e) => {
           type="text" 
           name="firstName" 
           value={firstName} 
-          required placeholder="John" 
+          required placeholder="FirstName" 
           onChange={this.handleChange}
           /><br/><br/>
         <label htmlFor="surName" className="lastName">Surname</label><br/>
         <input 
           type="text" 
           name="surName"
-          required placeholder="Smith"
+          required placeholder="SurName"
           value={surName} 
           onChange={this.handleChange}/>
         </div>
