@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {DeleteContact} from '../../actions/contactActions';
+import '../css/contact.css'
 
 class Contact extends Component {
 //// DELETE CONTACT ////
@@ -22,7 +23,7 @@ this.props.DeleteContact(id);
         </Link> 
         </div>
         <div className="col">
-        <i className="fas fa-times" onClick={this.onDeleteClick.bind(this, id)}/>
+        <i className="fas fa-times delete"  onClick={this.onDeleteClick.bind(this, id)}/>
         </div>
         </div>
      );
