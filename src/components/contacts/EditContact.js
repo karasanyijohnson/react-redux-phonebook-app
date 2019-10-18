@@ -12,10 +12,6 @@ class EditContact extends React.Component {
   };
 // this will return the input edit form
 UNSAFE_componentWillReceiveProps(nextProps,nextState){
-  // const nameArray = this.state.name.split(" ");
-  // console.log(this.state.name);
-  // console.log(nameArray[0]);
-
   const {name,phone_number}= nextProps.contact;
   this.setState({name, phone_number})
     const nameArray = name.split(" ");
@@ -26,9 +22,6 @@ UNSAFE_componentWillReceiveProps(nextProps,nextState){
       this.setState({firstName: nameArray[0]})
       this.setState({surName: nameArray[1]})
     }
-    console.log(this.state.firstName)
-    console.log(this.state.surName)
-
 }
 componentDidMount(){
   const {id}= this.props.match.params;
@@ -46,7 +39,6 @@ const updContact = {
   name,
   phone_number
 };
-    //// UPDATE CONTACT ////
 this.props.updateContact(updContact);
     // Clear State
     this.setState({

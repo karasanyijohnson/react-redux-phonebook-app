@@ -48,7 +48,7 @@ export const addContact=(contact)=> async dispatch=>{
     })
     }
 /// action updatecontact
-export const updateContact=(contact)=> async dispatch=>{
+export const updateContact= contact => async dispatch=>{
     const res= await Axios.put(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${contact.id}`,contact)
     dispatch({
         type:UPDATE_CONTACT,
